@@ -36,6 +36,7 @@ using namespace std;
 #define vpi vector<pair<int, int>>
 #define pi pair<int, int>
 #define mi map<int, int>
+#define umi unordered_map<int, int>
 #define si set<int>
 #define pqi priority_queue<int>
 // #define int long long
