@@ -39,6 +39,7 @@ using namespace std;
 #define si set<int>
 #define pqi priority_queue<int>
 // #define int long long
+// constants
 const int mod = 1e9 + 7;
 const int mod2 = 998244353;
 const int inf = 1e9;
