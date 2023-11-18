@@ -17,7 +17,7 @@ using namespace std;
 #define fileio                      \
 	freopen("input.txt", "r", stdin); \
 	freopen("output.txt", "w", stdout)
-#define usacoio(file)              \
+#define cowio(file)                \
 	freopen(file ".in", "r", stdin); \
 	freopen(file ".out", "w", stdout)
 #define endl '\n'
@@ -59,8 +59,8 @@ int32_t main()
 	fastio;
 #ifndef ONLINE_JUDGE
 	fileio;
-// usacoio("");
 #endif
+	// cowio("");
 	int t = 1;
 	// cin >> t;
 	for (int i = 1; i <= t; ++i)
