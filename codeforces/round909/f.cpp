@@ -51,6 +51,27 @@ const int LOGN = 20;
 void solve(int case_num)
 {
 	// ...
+	int n, q;
+	cin >> n >> q;
+	for (int i = 1; i < n; ++i)
+	{
+		cout << i << " " << i + 1 << endl;
+	}
+	int c = n - 1;
+	for (int i = 0; i < q; ++i)
+	{
+		int x;
+		cin >> x;
+		if (x == c)
+		{
+			cout << "-1 -1 -1" << endl;
+		}
+		else
+		{
+			cout << n << " " << c << " " << x << endl;
+			c = x;
+		}
+	}
 }
 // main
 int32_t main()
@@ -61,7 +82,7 @@ int32_t main()
 #endif
 	// cowio("");
 	int t = 1;
-	// cin >> t;
+	cin >> t;
 	for (int i = 1; i <= t; ++i)
 		solve(i);
 

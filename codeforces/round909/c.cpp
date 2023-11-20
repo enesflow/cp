@@ -17,40 +17,35 @@ using namespace std;
 #define fileio                      \
 	freopen("input.txt", "r", stdin); \
 	freopen("output.txt", "w", stdout)
-#define cowio(file)                \
-	freopen(file ".in", "r", stdin); \
-	freopen(file ".out", "w", stdout)
 #define endl '\n'
-#define printarr(arr, n)      \
-	for (int i = 0; i < n; ++i) \
-		cout << arr[i] << " ";    \
-	cout << endl;
-#define printauto(arr) \
-	for (auto it : arr)  \
-		cout << it << " "; \
-	cout << endl;
-#define ll long long
-#define vi vector<int>
-#define vii vector<vector<int>>
-#define viii vector<vector<vector<int>>>
-#define vpi vector<pair<int, int>>
-#define pi pair<int, int>
-#define mi map<int, int>
-#define umi unordered_map<int, int>
-#define si set<int>
-#define pqi priority_queue<int>
-// #define int long long
-// constants
-const int mod = 1e9 + 7;
-const int mod2 = 998244353;
-const int inf = 1e9;
-const int N = 2e5 + 5;
-const int LOGN = 20;
 
 // code
 void solve(int case_num)
 {
 	// ...
+	int n;
+	cin >> n;
+	int arr[n];
+	for (int i = 0; i < n; ++i)
+		cin >> arr[i];
+	int msf = INT_MIN, meh = 0;
+	int pr = 2;
+	for (int i = 0; i < n; ++i)
+	{
+		bool ok = ((abs(arr[i] % 2)) != pr);
+		if (!ok)
+			meh = 0;
+		meh += arr[i];
+		msf = max(msf, meh);
+		if (meh < 0)
+		{
+			meh = 0;
+			pr = 2;
+		}
+		else
+			pr = abs(arr[i] % 2);
+	}
+	cout << msf << endl;
 }
 // main
 int32_t main()
@@ -61,7 +56,7 @@ int32_t main()
 #endif
 	// cowio("");
 	int t = 1;
-	// cin >> t;
+	cin >> t;
 	for (int i = 1; i <= t; ++i)
 		solve(i);
 

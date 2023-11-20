@@ -51,6 +51,16 @@ const int LOGN = 20;
 void solve(int case_num)
 {
 	// ...
+	int n;
+	cin >> n;
+	if (n % 3 == 0)
+	{
+		cout << "Second" << endl;
+	}
+	else
+	{
+		cout << "First" << endl;
+	}
 }
 // main
 int32_t main()
@@ -61,7 +71,7 @@ int32_t main()
 #endif
 	// cowio("");
 	int t = 1;
-	// cin >> t;
+	cin >> t;
 	for (int i = 1; i <= t; ++i)
 		solve(i);
 
