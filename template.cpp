@@ -53,7 +53,7 @@ void solve(int case_num)
 	// ...
 }
 // main
-int32_t main()
+signed main()
 {
 	fastio;
 #ifndef ONLINE_JUDGE
